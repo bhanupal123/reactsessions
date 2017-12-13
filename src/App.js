@@ -3,14 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/navBar';
 import Wrapper from './components/wrapper';
-import LoginForm from './components/form';
+import TableForm from './components/form';
+import MyTable from './components/table';
 
 class App extends Component {
   render() {
     return (  
         <Wrapper>
             <NavBar items={menuItems} onClick={this.navItemClicked}/>
-            <LoginForm onSubmit={onSubmit}/>
+            <TableForm/>
+            <MyTable/>
         </Wrapper>
     );
   }
