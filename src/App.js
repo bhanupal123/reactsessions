@@ -7,12 +7,22 @@ import TableForm from './components/form';
 import MyTable from './components/table';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pageSize : 0,    
+      data : []
+    }
+
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
   render() {
     return (  
         <Wrapper>
             <NavBar items={menuItems} onClick={this.navItemClicked}/>
-            <TableForm/>
-            <MyTable/>
+            <TableForm onSubmit={this.onSubmit}/>
+            <MyTable pageSize={this.state.pageSize} data={this.state.data} columns={columns}/>
         </Wrapper>
     );
   }
@@ -20,12 +30,22 @@ class App extends Component {
   navItemClicked(color) { 
     console.log(`${color} clicked`);
   }
-}
 
-function onSubmit(data) {
-  console.log(data);
+  onSubmit(data) {
+    console.log(data);    
+    this.setState({
+      ...this.state,
+      pageSize : data.pageSize,      
+      data: new Array(data.totalRows).fill(0).map((d,i) => {
+        return {
+          firstName : 'First Name ' + i,
+          lastName : 'Last Name ' + i,
+          id : i
+        }
+      })
+    });
+  }
 }
-
 
 var menuItems = [
   "red",
@@ -33,6 +53,22 @@ var menuItems = [
   "green",
   "orange",
   "purple"
+]
+
+
+var columns = [
+  {
+      field : 'id',
+      header : 'Id',         
+  },
+  {
+      field : 'firstName',
+      header: 'First Name',      
+  },
+  {
+      field : 'lastName',
+      header: 'Last Name'
+  },  
 ]
 
 export default App;

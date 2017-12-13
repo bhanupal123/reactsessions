@@ -22,10 +22,17 @@ class TableForm extends Component {
                     <label>Total Rows</label>
                     <input placeholder='Total Rows' onChange={(e) => this.fieldChanged('totalRows',e)}/>
                     </Form.Field>                   
-                    <Button type='submit' onClick={() => this.props.onSubmit(this.state)} >Submit</Button>
+                    <Button type='submit' onClick={this.onSubmit.bind(this)} >Submit</Button>
                 </Form>
             </div>
         )
+    }
+
+    onSubmit() {
+         this.props.onSubmit({
+             totalRows : parseInt(this.state.totalRows),
+             pageSize : parseInt(this.state.pageSize)
+         });   
     }
 
     fieldChanged(field, e, data) {
