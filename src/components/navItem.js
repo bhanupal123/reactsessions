@@ -5,9 +5,10 @@ class NavItem extends Component {
         super(props);
     }
 
-    render() {        
+    render() {
+        var style = `5px solid ${this.props.color}`;
         return (
-            <a className="navanchor" style={{'border-top' :'5px solid green' }}>green</a>
+            <a className="navanchor" style={{'border-top' :style }}>{this.props.color}</a>
         )
     }
 }
