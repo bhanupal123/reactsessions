@@ -28,6 +28,12 @@
   justify-content: space-around;
 }
 
+
+.second {
+  display: flex;
+  justify-content: center;
+}
+
 .wrappedContent {
   width: 80%;
   display: flex;
