@@ -3,15 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/navBar';
 import Wrapper from './components/wrapper';
+import LoginForm from './components/form';
 
 class App extends Component {
   render() {
     return (  
         <Wrapper>
             <NavBar items={menuItems} onClick={this.navItemClicked}/>
-            <div>
-              <p className="second"> text </p>
-            </div>
+            <LoginForm onSubmit={onSubmit}/>
         </Wrapper>
     );
   }
@@ -21,6 +20,9 @@ class App extends Component {
   }
 }
 
+function onSubmit(data) {
+  console.log(data);
+}
 
 
 var menuItems = [
