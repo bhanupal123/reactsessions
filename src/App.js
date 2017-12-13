@@ -36,14 +36,18 @@ class App extends Component {
     this.setState({
       ...this.state,
       pageSize : data.pageSize,      
-      data: new Array(data.totalRows).fill(0).map((d,i) => {
-        return {
-          firstName : 'First Name ' + i,
-          lastName : 'Last Name ' + i,
-          id : i
-        }
-      })
+      data: maptimes(data.totalRows, record)
     });
+  }
+}
+
+let maptimes = (n,fn) => new Array(n).fill(0).map((d,i) => fn(i));
+let record = (i) => {
+  i++;
+  return {
+    firstName : 'First Name ' + i,
+    lastName : 'Last Name ' + i,
+    id : i
   }
 }
 
