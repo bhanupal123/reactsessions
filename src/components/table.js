@@ -101,8 +101,23 @@ class MyTable extends Component{
         )
     }
 
-    pageChanged(pageNo) {
-        console.log(`page changed to ${pageNo}`);
+    pageChanged(pageTag) {
+        var pageNo = this.state.currentPage;        
+        if(pageTag === '-1') {
+            if(pageNo > 1) {
+                --pageNo;
+            }
+        }else if(pageTag === '+1') {
+            if(pageNo < this.pagedData.getPages()){
+                ++pageNo;
+            }
+        }else {
+            pageNo = parseInt(pageTag);
+        }        
+        this.setState({
+            ...this.state,
+            currentPage : pageNo
+        });
     }
 }
 
