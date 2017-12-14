@@ -1,5 +1,5 @@
 
- Excercise : 
+ Exercise : 
  
  Create a component for user badge that takes 
  Name, User image, favorites, clients, project and chats
