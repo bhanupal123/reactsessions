@@ -34,7 +34,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/men/39.jpg"
 	},
 	"nat": "CH",
-	"favourites": 838,
+	"favorites": 838,
 	"projects": 140,
 	"clients": 64,
 	"comments": 849
@@ -74,7 +74,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/women/8.jpg"
 	},
 	"nat": "AU",
-	"favourites": 1839,
+	"favorites": 1839,
 	"projects": 20,
 	"clients": 41,
 	"comments": 200
@@ -114,7 +114,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/women/84.jpg"
 	},
 	"nat": "BR",
-	"favourites": 880,
+	"favorites": 880,
 	"projects": 6,
 	"clients": 46,
 	"comments": 542
@@ -154,7 +154,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/men/32.jpg"
 	},
 	"nat": "BR",
-	"favourites": 302,
+	"favorites": 302,
 	"projects": 48,
 	"clients": 64,
 	"comments": 1334
@@ -194,7 +194,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/women/20.jpg"
 	},
 	"nat": "US",
-	"favourites": 1578,
+	"favorites": 1578,
 	"projects": 197,
 	"clients": 96,
 	"comments": 1666
@@ -234,7 +234,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/men/22.jpg"
 	},
 	"nat": "TR",
-	"favourites": 1272,
+	"favorites": 1272,
 	"projects": 162,
 	"clients": 56,
 	"comments": 1919
@@ -274,7 +274,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/men/31.jpg"
 	},
 	"nat": "IE",
-	"favourites": 1044,
+	"favorites": 1044,
 	"projects": 147,
 	"clients": 80,
 	"comments": 748
@@ -314,7 +314,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/men/49.jpg"
 	},
 	"nat": "FI",
-	"favourites": 962,
+	"favorites": 962,
 	"projects": 142,
 	"clients": 1,
 	"comments": 59
@@ -354,7 +354,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/men/46.jpg"
 	},
 	"nat": "NZ",
-	"favourites": 1102,
+	"favorites": 1102,
 	"projects": 168,
 	"clients": 40,
 	"comments": 974
@@ -394,7 +394,7 @@
 		"thumbnail": "https://randomuser.me/api/portraits/thumb/men/68.jpg"
 	},
 	"nat": "CA",
-	"favourites": 512,
+	"favorites": 512,
 	"projects": 51,
 	"clients": 53,
 	"comments": 1054

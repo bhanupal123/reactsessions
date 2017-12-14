@@ -58,7 +58,7 @@ class App extends Component {
                     </ul>
                 </div>
                 <ul className="follow-list">
-                  <li><a href="#"><i className="fa fa-heart"></i> {users[0].favourites}</a></li>
+                  <li><a href="#"><i className="fa fa-heart"></i> {users[0].favorites}</a></li>
                     <li><a href="#"><i className="fa fa-users"></i> {users[0].clients}</a></li>
                     <li><a href="#"><i className="fa fa-folder"></i> {users[0].projects}</a></li>
                     <li><a href="#"><i className="fa fa-comments"></i>{users[0].comments}</a></li>
