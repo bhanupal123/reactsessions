@@ -87,7 +87,7 @@ ul, ol {
   
 .profileContainer {
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .top50 {
