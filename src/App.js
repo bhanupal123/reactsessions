@@ -4,36 +4,35 @@ import './App.css';
 import Wrapper from './components/wrapper';
 import users from './data/users';
 import UserBadge from './components/userBadge';
+import UserForm from './components/form';
+
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users : [],     
+    }
+  }
+
   render() {    
-    return (  
-      <Wrapper>        
-        <div className="profileContainer">  
-          {
-            users.map(user => 
-              <UserBadge {...this.convertUser(user)} onUserAdd={this.onUserAdd}/>
-            )
-          }
-        </div>
+    return (
+      <Wrapper>  
+        <UserForm {...this.state.userInfo} onSubmit={this.onUserAdd}/>
+        {
+          this.state.users.map(user => 
+             <UserBadge {...user} onUserAdd={this.onUserEdit}/>)
+        }
       </Wrapper>
     );
   }
 
-  convertUser(user) {
-    return {
-      name : user.name.first + ' ' + user.name.last,
-      gender : user.gender,
-      img: user.picture.large,
-      favorites : user.favorites,
-      comments : user.comments,
-      clients : user.clients,
-      projects: user.projects
-    }
+  onUserAdd(userInfo) {
+    console.log(userInfo);
   }
-
-  onUserAdd(user) {
-    console.log(`${user} added`);
+  
+  onUserEdit(userInfo) {
+    console.log(userInfo);
   }  
 }
 
