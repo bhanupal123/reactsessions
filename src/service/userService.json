@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "firstName": "John",
+      "lastName": "McCoy",
+      "gender": "male",
+      "projects": "54",
+      "comments": "12",
+      "favorites": "1",
+      "clients": "5",
+      "id": 1
+    },
+    {
+      "firstName": "Cathy",
+      "lastName": "Sierra",
+      "gender": "female",
+      "projects": "4",
+      "comments": "2",
+      "favorites": "1",
+      "clients": "53",
+      "id": 2
+    }
+  ]
+}

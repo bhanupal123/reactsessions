@@ -5,9 +5,9 @@ var female = 'https://randomuser.me/api/portraits/women/84.jpg';
 
 
 const UserBadge = props => {
-    let {name, favorites, projects, comments, gender, clients, img, onUserEdit} = props;
+    let {name, favorites, projects, comments, gender, clients, img, onUserEdit, id, onUserDelete} = props;
     return (
-        <div className="container top50">
+        <div style={{margin:'25px'}}>
             <div>
                 <div className={`item-1 ${gender}`}>
                     <div className="img-container">
@@ -16,7 +16,8 @@ const UserBadge = props => {
                     <div className="robin-key">
                         <p>{name}</p>
                         <ul>                            
-                            <li><a href="#" onClick={() => onUserEdit(name)}><i className="fa fa-edit"></i></a></li>
+                            <li><a onClick={() => onUserEdit(id)}><i className="fa fa-edit"></i></a></li>
+                            <li><a onClick={() => onUserDelete(id)}><i className="fa fa-trash-o"></i></a></li>
                         </ul>
                     </div>
 
