@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import { Icon, Label, Menu, Table } from 'semantic-ui-react'
 
 
-var mapTimes = (n, fn) => new Array(n).fill(0).map((d,i) => fn(i));
 
 class MyTable extends Component{
     constructor(props) {
