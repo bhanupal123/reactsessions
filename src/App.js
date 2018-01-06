@@ -6,6 +6,8 @@ import Wrapper from './components/wrapper';
 import TableForm from './components/form';
 import MyTable from './components/table';
 
+var mapTimes = (n, fn) => new Array(n).fill(0).map((d,i) => fn(i));
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +22,6 @@ class App extends Component {
   render() {
     return (  
         <Wrapper>
-            <NavBar items={menuItems} onClick={this.navItemClicked}/>
             <TableForm onSubmit={this.onSubmit}/>
             <MyTable pageSize={this.state.pageSize} data={this.state.data} columns={columns}/>
         </Wrapper>
@@ -36,7 +37,7 @@ class App extends Component {
     this.setState({
       ...this.state,
       pageSize : data.pageSize,      
-      data: new Array(data.totalRows).fill(0).map((d,i) => {
+      data: mapTimes(data.totalRows, (i) => {
         return {
           firstName : 'First Name ' + i,
           lastName : 'Last Name ' + i,
@@ -44,17 +45,10 @@ class App extends Component {
         }
       })
     });
+
+    console.log(this.state.data);
   }
 }
-
-var menuItems = [
-  "red",
-  "yellow",
-  "green",
-  "orange",
-  "purple"
-]
-
 
 var columns = [
   {
