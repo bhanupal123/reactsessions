@@ -10,29 +10,18 @@ class App extends Component {
   render() {
     return (  
         <Wrapper>
-            <NavBar items={menuItems} onClick={this.navItemClicked}/>
-            <TableForm/>
+            <TableForm onSubmit={this.onSubmit}/>
             <MyTable/>
         </Wrapper>
     );
   }
 
-  navItemClicked(color) { 
-    console.log(`${color} clicked`);
+  onSubmit(data) {
+    console.log(data);
   }
-}
-
-function onSubmit(data) {
-  console.log(data);
+  
 }
 
 
-var menuItems = [
-  "red",
-  "yellow",
-  "green",
-  "orange",
-  "purple"
-]
 
 export default App;

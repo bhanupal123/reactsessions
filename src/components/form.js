@@ -8,6 +8,7 @@ class TableForm extends Component {
             pageSize : "",
             totalRows : "",            
         };
+        this.fieldChanged = this.fieldChanged.bind(this);
     }
     
     render(){
@@ -37,4 +38,4 @@ class TableForm extends Component {
         //console.log(e);
     }
 }
-export default TableForm
+export default TableForm;
