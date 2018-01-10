@@ -63,7 +63,11 @@ class MyTable extends Component{
     }
 
     onPageChange(pageTag) {
-        console.log(`page changed to ${pageTag}`);
+        this.setState({
+            ...this.state,
+            currentPage : pageTag,
+            data : this.pagedData.getPage(pageTag)       
+        });
     }
 
     render(){

@@ -20,7 +20,6 @@ class App extends Component {
   render() {
     return (  
         <Wrapper>
-            <NavBar items={menuItems} onClick={this.navItemClicked}/>
             <TableForm onSubmit={this.onSubmit}/>
             <MyTable pageSize={this.state.pageSize} data={this.state.data} columns={columns}/>
         </Wrapper>
@@ -50,14 +49,6 @@ let record = (i) => {
     id : i
   }
 }
-
-var menuItems = [
-  "red",
-  "yellow",
-  "green",
-  "orange",
-  "purple"
-]
 
 
 var columns = [
